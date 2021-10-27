@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #bdbabc;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-areas: "nav nav nav" "productos servicios extras" "footer footer footer";
+  grid-gap: 10px; }
+  .contenedor .header {
+    background-color: #b28da4;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: nav;
+    color: white; }
+    .contenedor .header .logo {
+      color: white;
+      padding: 10px; }
+    .contenedor .header .nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+      .contenedor .header .nav .menu {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        .contenedor .header .nav .menu .elemento {
+          padding: 20px;
+          transition: all .3s ease; }
+          .contenedor .header .nav .menu .elemento:hover {
+            background-color: #9b4696;
+            border-radius: 50%; }
+          .contenedor .header .nav .menu .elemento a {
+            text-decoration: none;
+            color: white; }
+            .contenedor .header .nav .menu .elemento a:hover {
+              text-decoration: underline; }
+
+.productos {
+  grid-area: productos;
+  background-color: #eec2c2;
+  border-radius: 5px;
+  padding: 1rem; }
+  .productos h2 {
+    color: #9b4696; }
+  .productos p {
+    color: #532650; }
+
+.servicios {
+  grid-area: servicios;
+  background-color: #a7e3ec;
+  border-radius: 5px;
+  padding: 1rem; }
+  .servicios h2 {
+    color: #9b4696; }
+  .servicios p {
+    color: #532650; }
+
+.extras {
+  grid-area: extras;
+  background-color: #e9e6c1;
+  border-radius: 5px;
+  padding: 1rem; }
+  .extras h2 {
+    color: #9b4696; }
+  .extras p {
+    color: #532650; }
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  padding-top: 20px;
+  background-color: #b28da4;
+  color: white;
+  text-align: center;
+  height: 50px;
+  border-radius: 3px; }
